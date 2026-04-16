@@ -1,0 +1,147 @@
+.section {
+  width: 100%;
+  padding: 40px 128px 80px;
+}
+
+/* Separator with button */
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 60px;
+}
+
+.line {
+  flex: 1;
+  border: none;
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+}
+
+.separatorBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 56px;
+  background: #FFFFFF;
+  border: 3px solid #0153FF;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0153FF;
+  white-space: nowrap;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+/* Content: 2 columns — 60/40 split with large gap */
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 140px;
+  align-items: start;
+}
+
+/* Left column */
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -0.05em;
+  color: #000000;
+  margin-bottom: 32px;
+  max-width: 829px;
+}
+
+.titleUnderline {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
+.textLeft {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: -0.05em;
+  color: #787878;
+  margin-bottom: 24px;
+}
+
+.btnGreen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #44FF00;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+  width: fit-content;
+  margin-top: 32px;
+}
+
+/* Right column: Quote */
+.right {
+  margin-top: 70px;
+}
+
+.quoteBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.quoteIcon {
+  font-weight: 700;
+  font-size: 197px;
+  line-height: 0.6;
+  letter-spacing: -0.05em;
+  color: #0153FF;
+  flex-shrink: 0;
+}
+
+.quoteContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 435px;
+}
+
+.quoteText {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: -0.05em;
+  color: #000000;
+}
+
+.author {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 45px;
+  letter-spacing: -0.05em;
+  color: #000000;
+  margin-top: 32px;
+}
+
+.author span {
+  font-weight: 400;
+}

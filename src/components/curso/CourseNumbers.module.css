@@ -1,0 +1,77 @@
+.section {
+  width: 100%;
+  background: #F1F5FF;
+  padding: 80px 128px;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0153FF;
+  margin-bottom: 24px;
+}
+
+.inner {
+  display: flex;
+  gap: 60px;
+}
+
+.statsColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-weight: 700;
+  font-size: 197px;
+  line-height: 222px;
+  letter-spacing: -0.05em;
+  color: #0153FF;
+}
+
+.statDesc {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 40px;
+  color: #0153FF;
+  max-width: 562px;
+}
+
+.imageColumn {
+  flex-shrink: 0;
+}
+
+.image {
+  width: 952px;
+  height: 1017px;
+  background-color: #D0D8E8;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.caption {
+  padding: 40px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+.caption strong {
+  font-weight: 700;
+}

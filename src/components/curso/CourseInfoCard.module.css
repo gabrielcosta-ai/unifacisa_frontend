@@ -1,0 +1,128 @@
+.card {
+  width: 100%;
+  padding: 60px 128px 0;
+}
+
+.inner {
+  background: #0153FF;
+  border-radius: 51px;
+  padding: 100px 88px 120px;
+  min-height: 751px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.topLeft {
+  flex: 1;
+  max-width: 65%;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 77px;
+  line-height: 90px;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.3fr;
+  gap: 40px;
+}
+
+.column {}
+
+.columnLabel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: #FFFFFF;
+  border-radius: 30.5px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  color: #0153FF;
+  width: fit-content;
+  height: 40px;
+  white-space: nowrap;
+}
+
+.pillOutlined {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: transparent;
+  border: 3px solid #FFFFFF;
+  border-radius: 30.5px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  color: #FFFFFF;
+  width: fit-content;
+  height: 40px;
+}
+
+.ingressColumn {
+  grid-column: span 1;
+}
+
+.ingressLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ingressLink {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+/* MEC Badge - top right */
+.mecBadge {
+  flex-shrink: 0;
+}
+
+.mecImage {
+  width: 400px;
+  height: auto;
+}

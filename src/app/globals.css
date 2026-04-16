@@ -1,0 +1,157 @@
+@import "@fontsource-variable/sora";
+
+:root {
+  /* Colors */
+  --color-primary: #0153FF;
+  --color-green: #44FF00;
+  --color-light-blue: #F1F5FF;
+  --color-gray-bg: #F2F2F2;
+  --color-gray-text: #787878;
+  --color-gray-light: rgba(0, 0, 0, 0.5);
+  --color-gray-border: rgba(135, 135, 135, 0.5);
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Border Radius */
+  --radius-xl: 51px;
+  --radius-lg: 43px;
+  --radius-md: 36px;
+  --radius-sm: 30.5px;
+  --radius-btn: 128px;
+  --radius-circle: 200px;
+  --radius-pill: 72px;
+
+  /* Layout */
+  --max-width: 1920px;
+  --content-padding: 128px;
+
+  /* Typography Scale */
+  --font-display-large: 800 120px/100px 'Sora Variable', sans-serif;
+  --font-display-medium: 700 90px/90px 'Sora Variable', sans-serif;
+  --font-display-small: 700 56px/60px 'Sora Variable', sans-serif;
+  --font-h1: 700 77px/90px 'Sora Variable', sans-serif;
+  --font-h2: 700 40px/50px 'Sora Variable', sans-serif;
+  --font-body: 400 34px/40px 'Sora Variable', sans-serif;
+  --font-body-sm: 400 20px/28px 'Sora Variable', sans-serif;
+  --font-caption: 400 16px/20px 'Sora Variable', sans-serif;
+  --font-pill: 400 12px/15px 'Sora Variable', sans-serif;
+  --font-pill-sm: 400 8px/10px 'Sora Variable', sans-serif;
+
+  --ls-tight: -0.05em;
+  --ls-wide: 0.15em;
+  --ls-pill: 0.06em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora Variable', 'Sora', sans-serif;
+  color: var(--color-black);
+  background: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Typography utility classes */
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.display-large {
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 100px;
+  letter-spacing: -0.05em;
+}
+
+.display-medium {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: -0.05em;
+}
+
+.display-small {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -0.05em;
+}
+
+.h1-title {
+  font-weight: 700;
+  font-size: 77px;
+  line-height: 90px;
+  letter-spacing: -0.05em;
+}
+
+.h2-subtitle {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.body-text {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 40px;
+}
+
+.body-sm {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.caption {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.pill {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pill-sm {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}

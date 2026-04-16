@@ -1,0 +1,181 @@
+.section {
+  width: 100%;
+  background: #F2F2F2;
+}
+
+.inner {
+  padding: 68px 128px 80px;
+}
+
+.headers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.headerPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 18px;
+  background: #0153FF;
+  border-radius: 30.5px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  width: fit-content;
+}
+
+/* Grid layout: 2 columns (courses | programs) */
+.gridWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.coursesColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 329px 329px;
+  gap: 24px;
+}
+
+.programsColumn {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 329px 329px;
+  gap: 24px;
+}
+
+/* Course cards */
+.courseCard {
+  position: relative;
+  background-color: #D0D0D0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.courseType {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 31px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000000;
+  width: fit-content;
+}
+
+.courseBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.courseName {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #F1F5FF;
+  border-radius: 72px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0153FF;
+}
+
+.courseArrow {
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 213px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA card */
+.ctaCard {
+  background: #0153FF;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  text-decoration: none;
+}
+
+.ctaText {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 39px;
+  text-decoration: underline;
+  color: #FFFFFF;
+  max-width: 274px;
+}
+
+.ctaArrow {
+  width: 55px;
+  height: 55px;
+  background: #FFFFFF;
+  border-radius: 213px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+/* Program cards */
+.programCard {
+  position: relative;
+  background-color: #3060B0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  text-decoration: none;
+}
+
+.programBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.programName {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  color: #FFFFFF;
+  max-width: 472px;
+}
+
+.programTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 18px 32px;
+  background: #FFFFFF;
+  border-radius: 72px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  flex-shrink: 0;
+}

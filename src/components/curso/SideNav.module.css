@@ -1,0 +1,25 @@
+.nav {
+  position: fixed;
+  left: 128px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 10;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #0153FF;
+}

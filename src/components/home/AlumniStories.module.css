@@ -1,0 +1,101 @@
+.section {
+  width: 100%;
+  padding: 80px var(--content-padding);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 77px;
+  line-height: 90px;
+  letter-spacing: -0.05em;
+  color: #0153FF;
+  max-width: 900px;
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: flex;
+  gap: 24px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnWide {
+  width: 686px;
+  flex-shrink: 0;
+}
+
+.columnNarrow {
+  width: 441px;
+  flex-shrink: 0;
+}
+
+.card {
+  position: relative;
+  height: 729px;
+  border-radius: 38px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.alumniPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 72px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: fit-content;
+}
+
+.cardBottomArea {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardText {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color: #0153FF;
+  text-decoration: underline;
+  max-width: 90%;
+}
+
+.cardTime {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #FFFFFF;
+  align-self: flex-end;
+}
+
+.playIcon {
+  width: 33px;
+  height: 40px;
+  margin-top: 16px;
+  color: #000000;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}

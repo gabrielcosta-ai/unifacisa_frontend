@@ -1,0 +1,118 @@
+.section {
+  width: 100%;
+  padding: 120px var(--content-padding);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 100px;
+  letter-spacing: -0.05em;
+  color: #0153FF;
+  max-width: 1200px;
+  margin-bottom: 80px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.vestibularInfo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.card {
+  position: relative;
+  width: 630px;
+  height: 467px;
+  background: #FFFFFF;
+  border: 3px solid #0153FF;
+  border-radius: 50px;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.greenBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #44FF00;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.outlinedBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #FFFFFF;
+  border: 3px solid #0153FF;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0153FF;
+  text-decoration: none;
+}
+
+.arrowButton {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #0153FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowButton svg {
+  width: 28px;
+  height: 28px;
+  transform: rotate(-45deg);
+}

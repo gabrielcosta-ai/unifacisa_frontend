@@ -1,0 +1,47 @@
+.section {
+  width: 100%;
+  padding: 40px 128px;
+}
+
+.card {
+  width: 100%;
+  height: 106px;
+  background: #FFFFFF;
+  border: 5px solid #0153FF;
+  border-radius: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px 0 42px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  font-size: 36px;
+  color: #0153FF;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  color: #0153FF;
+}
+
+.btn {
+  width: 75px;
+  height: 75px;
+  background: #0153FF;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+}

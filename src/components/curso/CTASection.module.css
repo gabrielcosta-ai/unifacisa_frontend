@@ -1,0 +1,95 @@
+.section {
+  width: 100%;
+  padding: 80px 128px 60px;
+}
+
+.inner {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.left {
+  flex: 1;
+  max-width: 1099px;
+}
+
+.headline {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #0153FF;
+}
+
+.headlineUnderline {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+}
+
+.vestibularInfo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  color: #000000;
+  margin-top: 24px;
+}
+
+.right {
+  flex-shrink: 0;
+}
+
+.vestibularCard {
+  width: 532px;
+  height: 412px;
+  background: #FFFFFF;
+  border: 3px solid #0153FF;
+  border-radius: 64px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.cardLabel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: -48px;
+}
+
+.dateLink {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.btnGreen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #44FF00;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+  width: fit-content;
+}

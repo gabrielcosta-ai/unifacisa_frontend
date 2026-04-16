@@ -1,0 +1,217 @@
+.footer {
+  width: 100%;
+  background: #0153FF;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.inner {
+  padding: 86px 128px 0;
+}
+
+/* ── Top: 3-column grid ── */
+.top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.topLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.topLeft img {
+  margin-bottom: 44px;
+}
+
+.phone {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 28px;
+  margin-bottom: 45px;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  max-width: 438px;
+}
+
+.addressBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #FFFFFF;
+  max-width: 406px;
+}
+
+.addressName {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.addressText {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.topMid {
+  padding-top: 39px;
+}
+
+.topRight {
+  padding-top: 116px;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid #FFFFFF;
+  margin-bottom: 40px;
+}
+
+/* ── Columns ── */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.columnTitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.columnLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.columnLinks a {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.columnLinks a:hover {
+  text-decoration: underline;
+}
+
+.linkBold {
+  font-weight: 700 !important;
+}
+
+.columnLinksBold {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.columnLinksBold a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+.columnLinksBold a:hover {
+  text-decoration: underline;
+}
+
+.mecSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: visible;
+  min-height: 113px;
+}
+
+.mecMid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mecTransparencia {
+  font-weight: 400;
+  font-size: 6px;
+  line-height: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.mecLink {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  max-width: 170px;
+}
+
+.qrCode {
+  border-radius: 11px;
+}
+
+.mecSealGroup {
+  flex-shrink: 0;
+}
+
+.mecInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mecTitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 28px;
+}
+
+.mecSmallDesc {
+  font-weight: 400;
+  font-size: 6px;
+  line-height: 8px;
+  letter-spacing: 0.15em;
+  max-width: 237px;
+}
+
+.bottomRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+/* ── Bottom: Slogan left + MEC/Credit right ── */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bigText {
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 100px;
+  letter-spacing: -0.05em;
+  max-width: 854px;
+  margin-bottom: -10px;
+}
+
+.credit {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  padding-bottom: 28px;
+}

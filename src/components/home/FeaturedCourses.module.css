@@ -1,0 +1,141 @@
+.section {
+  width: 100%;
+  padding: 80px var(--content-padding);
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: flex;
+  gap: 32px;
+}
+
+.card {
+  position: relative;
+  width: 540px;
+  height: 637px;
+  border-radius: 36px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.areaName {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 39px;
+  color: #FFFFFF;
+}
+
+.graduationPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 72px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.alumniPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 72px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 8px;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.coursePill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 26px;
+  border-radius: 72px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.coursePillBlue {
+  background: #B9DFFF;
+}
+
+.coursePillOrange {
+  background: #FFD5A9;
+}
+
+.coursePillPurple {
+  background: #F0D8FF;
+}
+
+.arrowBtn {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-90deg);
+  color: #FFFFFF;
+}
+
+.playIcon {
+  width: 33px;
+  height: 40px;
+  margin-top: 16px;
+  color: #000000;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}

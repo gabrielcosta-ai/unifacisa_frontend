@@ -1,0 +1,63 @@
+.section {
+  width: 100%;
+  padding: 80px 105px;
+}
+
+.card {
+  width: 100%;
+  min-height: 907px;
+  background: #0153FF;
+  border-radius: 72px;
+  padding: 80px 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 48px;
+}
+
+.quote {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+  max-width: 1200px;
+  margin-bottom: 48px;
+}
+
+.author {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+
+.btnWrapper {
+  position: absolute;
+  right: 96px;
+  bottom: 96px;
+}
+
+.visionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 48px;
+  background: #FFFFFF;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+}

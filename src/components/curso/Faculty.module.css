@@ -1,0 +1,143 @@
+.section {
+  width: 100%;
+  padding: 80px 128px;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+.inner {
+  display: flex;
+  gap: 60px;
+}
+
+/* Coordinator card */
+.coordinatorCard {
+  width: 584px;
+  flex-shrink: 0;
+  background: #0153FF;
+  border-radius: 51px;
+  overflow: hidden;
+}
+
+.coordinatorPhoto {
+  width: 100%;
+  height: 449px;
+  background-color: #C0C8D8;
+  background-size: cover;
+  background-position: center;
+  border-radius: 51px 51px 0 0;
+}
+
+.coordinatorInfo {
+  padding: 24px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coordinatorBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: #FFFFFF;
+  border-radius: 30.5px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0153FF;
+  width: fit-content;
+}
+
+.coordinatorName {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 66px;
+  color: #FFFFFF;
+}
+
+.coordinatorEmail {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 66px;
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+/* Professors list */
+.professorsList {
+  flex: 1;
+}
+
+.othersLabel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.professorsItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.professorItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(135, 135, 135, 0.5);
+}
+
+.professorItem:first-child {
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+}
+
+.professorName {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.professorRole {
+  font-weight: 400;
+}
+
+.professorNameBold {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.arrowBtn {
+  width: 55px;
+  height: 55px;
+  background: none;
+  border: 2px solid #0153FF;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}

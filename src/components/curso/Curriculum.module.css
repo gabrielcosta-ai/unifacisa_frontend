@@ -1,0 +1,111 @@
+.section {
+  width: 100%;
+  padding: 80px 128px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 60px;
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  border-top: 2px solid #0153FF;
+}
+
+.item:last-child {
+  border-bottom: 2px solid #0153FF;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  width: 100%;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.itemName {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.expandBtn {
+  width: 55px;
+  height: 55px;
+  background: #0153FF;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.expandBtnOpen {
+  transform: rotate(45deg);
+}
+
+/* Subjects list (accordion content) */
+.subjects {
+  padding: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.subject {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(135, 135, 135, 0.3);
+}
+
+.subject:last-child {
+  border-bottom: none;
+}
+
+.subjectName {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.subjectHours {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #787878;
+  flex-shrink: 0;
+}
+
+.expandAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #0153FF;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin-top: 40px;
+  width: fit-content;
+  cursor: pointer;
+}

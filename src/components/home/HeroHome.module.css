@@ -1,0 +1,111 @@
+.section {
+  width: 100%;
+}
+
+.heroImageWrapper {
+  position: relative;
+  margin: 0 var(--content-padding);
+  height: 958px;
+  border-radius: 38px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%), url('/images/home/campus-fachada-alunos.png') center / cover no-repeat;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 64px;
+}
+
+.heroTopRight {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.vestibularBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 32px;
+  background: #44FF00;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.heroTitle {
+  font-weight: 800;
+  font-size: 65px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+}
+
+.heroSubtitle {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin-top: 16px;
+  max-width: 650px;
+}
+
+.heroBottomRight {
+  position: absolute;
+  bottom: 60px;
+  right: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.coursesBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #0153FF;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.timeIndicator {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.belowHero {
+  padding: 60px var(--content-padding) 48px;
+}
+
+.belowHeroTitle {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 90px;
+  color: #0153FF;
+  text-decoration: underline;
+  letter-spacing: -0.05em;
+  max-width: 1100px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+  margin: 0 var(--content-padding);
+}

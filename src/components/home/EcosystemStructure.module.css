@@ -1,0 +1,97 @@
+.section {
+  width: 100%;
+  background: #DDE8FF;
+  padding: 80px var(--content-padding) 60px;
+  min-height: 2920px;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  max-width: 1200px;
+  margin-bottom: 64px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  border-radius: 64px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 100%), #999999;
+  flex-shrink: 0;
+}
+
+.cardLarge {
+  width: 957px;
+  height: 736px;
+}
+
+.cardSmall {
+  width: 675px;
+  height: 736px;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, 0.8) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px 48px;
+  gap: 16px;
+}
+
+.cardName {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(--color-white);
+  border-radius: var(--radius-pill);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-black);
+  width: fit-content;
+}
+
+.disclaimer {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  opacity: 0.5;
+  margin-top: 48px;
+  max-width: 1200px;
+}

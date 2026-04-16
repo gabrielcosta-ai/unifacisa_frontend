@@ -1,0 +1,43 @@
+.topBar {
+  width: 100%;
+  background: #44FF00;
+  height: 58px;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  width: 100%;
+  padding: 0 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.announcement {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.05em;
+  color: #000000;
+  text-align: center;
+}
+
+.announcementLink {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 128px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: 0;
+}

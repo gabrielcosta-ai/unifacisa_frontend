@@ -1,0 +1,153 @@
+.hero {
+  width: 100%;
+  position: relative;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 128px;
+  right: 128px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 38px 38px;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 128px 0;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 90px;
+  color: #0153FF;
+  max-width: 958px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  color: #0153FF;
+  max-width: 816px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  background: #44FF00;
+  border-radius: 31px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000000;
+  width: fit-content;
+}
+
+.scrollRow {
+  padding: 40px 128px 40px;
+}
+
+.scrollCta {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 50px;
+  color: #0153FF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow {
+  font-size: 35px;
+}
+
+.right {
+  flex-shrink: 0;
+}
+
+.vestibularCard {
+  width: 532px;
+  height: 412px;
+  background: #FFFFFF;
+  border: 3px solid #0153FF;
+  border-radius: 64px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.vestibularLabel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.vestibularDates {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: -48px;
+}
+
+.vestibularDate {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -0.05em;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.vestibularButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+  align-items: flex-start;
+}
+
+.btnGreen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #44FF00;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+  margin: 0 128px;
+}

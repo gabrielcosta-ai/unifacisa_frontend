@@ -1,0 +1,231 @@
+.section {
+  width: 100%;
+  background: #F9F9F9;
+  padding: 80px var(--content-padding) 60px;
+}
+
+/* 8a - Acontecimentos */
+.newsBlock {
+  margin-bottom: 80px;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 24px;
+}
+
+.newsTitle {
+  font-weight: 700;
+  font-size: 77px;
+  line-height: 90px;
+  letter-spacing: -0.05em;
+  color: var(--color-black);
+  margin-bottom: 48px;
+}
+
+.newsContent {
+  display: flex;
+  gap: 48px;
+}
+
+.newsImage {
+  position: relative;
+  width: 642px;
+  height: 493px;
+  border-radius: 38px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%), #BBBBBB;
+  flex-shrink: 0;
+}
+
+.newsPill {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 10px 24px;
+  background: var(--color-white);
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--color-black);
+}
+
+.newsRight {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+}
+
+.newsItemDate {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 8px;
+}
+
+.newsItemHeadline {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 44px;
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+.newsArrow {
+  font-style: normal;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.blueBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: var(--color-primary);
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-white);
+  margin-top: 24px;
+  width: fit-content;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+  margin: 48px 0;
+}
+
+/* 8b - Eventos */
+.eventsBlock {
+  margin-top: 0;
+}
+
+.eventsTitle {
+  font-weight: 700;
+  font-size: 77px;
+  line-height: 90px;
+  letter-spacing: -0.05em;
+  color: var(--color-black);
+  margin-bottom: 48px;
+}
+
+.eventsContent {
+  display: flex;
+  gap: 48px;
+}
+
+.eventsImage {
+  position: relative;
+  width: 642px;
+  height: 493px;
+  border-radius: 38px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%), #CCAADD;
+  flex-shrink: 0;
+}
+
+.eventsPill {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 10px 24px;
+  background: var(--color-white);
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.eventsRight {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.eventItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.eventName {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 44px;
+  color: var(--color-black);
+  flex: 1;
+}
+
+.eventBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: #F6E9FF;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #551B7D;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.purpleBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #9C01FF;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-white);
+  margin-top: 24px;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+.dividerBottom {
+  border: none;
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+  margin: 48px 0 0;
+}
