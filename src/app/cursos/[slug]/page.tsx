@@ -1,4 +1,4 @@
-import { payloadFind } from '@/lib/payload'
+import { payloadFind, mediaUrl } from '@/lib/payload'
 import { notFound } from 'next/navigation'
 
 import { HeroSection } from '@/components/curso/HeroSection'
@@ -21,7 +21,7 @@ type Props = {
 
 function getMediaUrl(media: unknown): string {
   if (media && typeof media === 'object' && 'url' in media) {
-    return (media as { url: string }).url || ''
+    return mediaUrl((media as { url: string }).url) || ''
   }
   return ''
 }
