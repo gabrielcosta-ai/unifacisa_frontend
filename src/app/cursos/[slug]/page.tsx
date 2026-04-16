@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 
 import { HeroSection } from '@/components/curso/HeroSection'
 import { CourseInfoCard } from '@/components/curso/CourseInfoCard'
-import { AISummary } from '@/components/curso/AISummary'
 import { PhotoGallery } from '@/components/curso/PhotoGallery'
 import { AcademicVision } from '@/components/curso/AcademicVision'
 import { CourseVideo } from '@/components/curso/CourseVideo'
@@ -165,8 +164,6 @@ export default async function CursoPage({ params }: Props) {
           mecNote={course.overview?.mecGrade || undefined}
         />
       </section>
-
-      <AISummary />
 
       <PhotoGallery
         title="Sinta a atmosfera da sua formacao"
