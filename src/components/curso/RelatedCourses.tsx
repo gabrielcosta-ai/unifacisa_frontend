@@ -46,7 +46,7 @@ export function RelatedCourses({ courses, programs, ctaText, ctaHref }: RelatedC
       <div className={styles.inner}>
         <div className={styles.headers}>
           <span className={styles.headerPill}>Cursos Relacionados</span>
-          <span className={styles.headerPill}>Programas Relacionados</span>
+          {programs.length > 0 && <span className={styles.headerPill}>Programas Relacionados</span>}
         </div>
 
         <div className={styles.gridWrapper}>
@@ -81,17 +81,19 @@ export function RelatedCourses({ courses, programs, ctaText, ctaHref }: RelatedC
           </div>
 
           {/* Right: Programs */}
-          <div className={styles.programsColumn}>
-            {programs.map((program, i) => (
-              <a key={i} href={program.href} className={styles.programCard} style={program.imageSrc ? { backgroundImage: `linear-gradient(180deg, rgba(1,83,255,0) 58.21%, rgba(0,0,0,0.4) 100%), url(${program.imageSrc})` } : undefined}>
-                <span className={styles.courseType}>{program.type}</span>
-                <div className={styles.programBottom}>
-                  <span className={styles.programName}>{program.name}</span>
-                  <span className={styles.programTag}>{program.tag}</span>
-                </div>
-              </a>
-            ))}
-          </div>
+          {programs.length > 0 && (
+            <div className={styles.programsColumn}>
+              {programs.map((program, i) => (
+                <a key={i} href={program.href} className={styles.programCard} style={program.imageSrc ? { backgroundImage: `linear-gradient(180deg, rgba(1,83,255,0) 58.21%, rgba(0,0,0,0.4) 100%), url(${program.imageSrc})` } : undefined}>
+                  <span className={styles.courseType}>{program.type}</span>
+                  <div className={styles.programBottom}>
+                    <span className={styles.programName}>{program.name}</span>
+                    <span className={styles.programTag}>{program.tag}</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

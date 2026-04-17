@@ -48,8 +48,8 @@ export function Faculty({ title, coordinator, professors }: FacultyProps) {
                 </span>
                 <button className={styles.arrowBtn} aria-label="Ver perfil">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M4 10h12" stroke="#0153FF" strokeWidth="2" />
-                    <path d="M12 4l6 6-6 6" stroke="#0153FF" strokeWidth="2" fill="none" />
+                    <path d="M4 10h12" stroke="#FFFFFF" strokeWidth="2" />
+                    <path d="M12 4l6 6-6 6" stroke="#FFFFFF" strokeWidth="2" fill="none" />
                   </svg>
                 </button>
               </div>

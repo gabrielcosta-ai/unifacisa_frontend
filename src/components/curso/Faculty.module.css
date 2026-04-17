@@ -132,8 +132,8 @@
 .arrowBtn {
   width: 55px;
   height: 55px;
-  background: none;
-  border: 2px solid #0153FF;
+  background: #0153FF;
+  border: none;
   border-radius: 200px;
   display: flex;
   align-items: center;

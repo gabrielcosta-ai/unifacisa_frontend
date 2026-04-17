@@ -1,11 +1,13 @@
 import styles from './Header.module.css'
 import Image from 'next/image'
 import { payloadFindGlobal } from '@/lib/payload'
+import { MenuOverlay } from './MenuOverlay'
 
 export async function Header() {
   let logoUrl = '/images/logo-unifacisa-blue.png'
   let logoWidth = 302
   let logoHeight = 70
+  let menuData = {}
 
   try {
     const site = await payloadFindGlobal('site-settings')
@@ -17,8 +19,16 @@ export async function Header() {
       if (logo.width) logoWidth = logo.width
       if (logo.height) logoHeight = logo.height
     }
+
+    const menu = await payloadFindGlobal('menu-settings')
+    menuData = {
+      ctaTitle: menu.ctaTitle,
+      buttons: menu.buttons,
+      columns: menu.columns,
+      bigText: menu.bigText,
+    }
   } catch {
-    // Global may not exist yet on first run — use fallback
+    // Globals may not exist yet on first run — use fallbacks
   }
 
   return (
@@ -35,7 +45,7 @@ export async function Header() {
             UMA EXPERIÊNCIA QUE{'\n'}MARCA A SUA HISTÓRIA.
           </span>
         </div>
-        <a href="#menu" className={styles.menuLink}>MENU</a>
+        <MenuOverlay data={menuData} />
       </div>
       <hr className={styles.divider} />
     </header>

@@ -39,17 +39,15 @@ export function CoursesFilters({ onFilterChange }: CoursesFiltersProps) {
 
   const toggleFilter = useCallback(
     (category: keyof ActiveFilters, value: string) => {
-      setFilters((prev) => {
-        const current = prev[category]
-        const next = current.includes(value)
-          ? current.filter((v) => v !== value)
-          : [...current, value]
-        const updated = { ...prev, [category]: next }
-        onFilterChange(updated)
-        return updated
-      })
+      const current = filters[category]
+      const next = current.includes(value)
+        ? current.filter((v) => v !== value)
+        : [...current, value]
+      const updated = { ...filters, [category]: next }
+      setFilters(updated)
+      onFilterChange(updated)
     },
-    [onFilterChange],
+    [filters, onFilterChange],
   )
 
   return (
@@ -73,7 +71,8 @@ export function CoursesFilters({ onFilterChange }: CoursesFiltersProps) {
                       checked={filters.modality.includes(opt.value)}
                       onChange={() => toggleFilter('modality', opt.value)}
                     />
-                    <span className={styles.toggleSlider} />
+                    <span className={styles.toggleTrack} />
+                    <span className={styles.toggleKnob} />
                   </span>
                 </label>
               ))}
@@ -91,7 +90,8 @@ export function CoursesFilters({ onFilterChange }: CoursesFiltersProps) {
                       checked={filters.period.includes(opt.value)}
                       onChange={() => toggleFilter('period', opt.value)}
                     />
-                    <span className={styles.toggleSlider} />
+                    <span className={styles.toggleTrack} />
+                    <span className={styles.toggleKnob} />
                   </span>
                 </label>
               ))}
@@ -109,26 +109,13 @@ export function CoursesFilters({ onFilterChange }: CoursesFiltersProps) {
                       checked={filters.duration.includes(opt.value)}
                       onChange={() => toggleFilter('duration', opt.value)}
                     />
-                    <span className={styles.toggleSlider} />
+                    <span className={styles.toggleTrack} />
+                    <span className={styles.toggleKnob} />
                   </span>
                 </label>
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className={styles.aiSection}>
-        <div className={styles.aiCard}>
-          <div className={styles.aiLeft}>
-            <span className={styles.aiIcon}>&#10022;</span>
-            <span className={styles.aiText}>Encontre o melhor curso para você com IA</span>
-          </div>
-          <button className={styles.aiBtn} aria-label="Buscar com IA">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M4 10h12M10 4l6 6-6 6" stroke="#FFFFFF" strokeWidth="2" />
-            </svg>
-          </button>
         </div>
       </section>
     </>

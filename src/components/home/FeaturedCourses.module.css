@@ -20,8 +20,8 @@
 
 .card {
   position: relative;
-  width: 540px;
-  height: 637px;
+  width: 581px;
+  height: 737px;
   border-radius: 36px;
   overflow: hidden;
   background-size: cover;
@@ -115,27 +115,12 @@
 }
 
 .arrowBtn {
-  width: 66px;
-  height: 66px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-
-.arrowIcon {
-  width: 24px;
-  height: 24px;
-  transform: rotate(-90deg);
-  color: #FFFFFF;
-}
-
-.playIcon {
-  width: 33px;
-  height: 40px;
-  margin-top: 16px;
-  color: #000000;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }

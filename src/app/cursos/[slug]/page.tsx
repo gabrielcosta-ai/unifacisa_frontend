@@ -125,7 +125,7 @@ export default async function CursoPage({ params }: Props) {
     : []
 
   // Cursos relacionados
-  const courseTypeLabels: Record<string, string> = { graduacao: 'graduacao', 'pos-graduacao': 'pos graduacao' }
+  const courseTypeLabels: Record<string, string> = { graduacao: 'Graduação', 'pos-graduacao': 'Pós Graduação', 'pos-medica': 'Pós Médica', residencia: 'Residência', fellowship: 'Fellowship' }
   const relatedCoursesData = Array.isArray(course.relatedCourses)
     ? course.relatedCourses
         .filter((c: unknown): c is Record<string, unknown> & { name: string; slug: string } => typeof c === 'object' && c !== null && 'name' in (c as Record<string, unknown>))
@@ -133,6 +133,7 @@ export default async function CursoPage({ params }: Props) {
           name: c.name as string,
           type: courseTypeLabels[c.type as string] || (c.type as string) || '',
           href: `/cursos/${c.slug}`,
+          imageSrc: getMediaUrl(c.cardImage),
         }))
     : []
 
@@ -249,11 +250,18 @@ export default async function CursoPage({ params }: Props) {
 
       <RelatedCourses
         courses={relatedCoursesData}
-        programs={[
-          { name: 'Acesse uma residencia na melhor estrutura da Paraiba', type: 'residencia', href: '#', tag: 'Ver vagas' },
-          { name: 'Acesse uma residencia na melhor estrutura da Paraiba', type: 'fellowship', href: '#', tag: 'Ver vagas' },
-        ]}
-        ctaText="Veja agora todos os cursos de saude"
+        programs={
+          course.showRelatedPrograms && Array.isArray(course.relatedPrograms)
+            ? course.relatedPrograms.map((p: { name: string; type: string; href: string; tag?: string; image?: unknown }) => ({
+                name: p.name,
+                type: p.type,
+                href: p.href,
+                tag: p.tag || 'Ver vagas',
+                imageSrc: getMediaUrl(p.image),
+              }))
+            : []
+        }
+        ctaText="Veja agora todos os cursos de saúde"
         ctaHref="/cursos"
       />
     </main>

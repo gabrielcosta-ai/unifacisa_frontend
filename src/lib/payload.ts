@@ -18,6 +18,6 @@ export async function payloadFindGlobal(slug: string) {
 
 export function mediaUrl(url: string | null | undefined): string {
   if (!url) return ''
-  if (url.startsWith('http')) return url
-  return `${BACKEND_URL}${url}`
+  const full = url.startsWith('http') ? url : `${BACKEND_URL}${url}`
+  return full.replace(/\(/g, '%28').replace(/\)/g, '%29')
 }

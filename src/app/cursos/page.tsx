@@ -8,13 +8,15 @@ export const dynamic = 'force-dynamic'
 export default async function CursosPage() {
   const data = await payloadFind('courses', {
     'where[status][equals]': 'publicado',
+    'where[type][equals]': 'graduacao',
     limit: '200',
     depth: '1',
   })
   const courses = data.docs
 
-  // Extract unique area names (from the taxonomia relationship) and build course items
-  const areaSet = new Set<string>()
+  // Ordem fixa das áreas conforme wireframe
+  const AREA_ORDER = ['Engenharias', 'Negócios & Justiça', 'Saúde', 'Tecnologia e Design']
+
   const courseItems: CourseItem[] = []
 
   for (const course of courses) {
@@ -22,8 +24,6 @@ export default async function CursosPage() {
       course.area && typeof course.area === 'object' && 'name' in course.area
         ? (course.area as { name: string }).name
         : 'Outros'
-
-    areaSet.add(areaName)
 
     courseItems.push({
       name: course.name,
@@ -35,8 +35,12 @@ export default async function CursosPage() {
     })
   }
 
-  // Sort areas alphabetically but keep a stable order
-  const areas = Array.from(areaSet).sort((a, b) => a.localeCompare(b, 'pt-BR'))
+  // Usar ordem fixa do wireframe, adicionar áreas extras no final
+  const areaSet = new Set(courseItems.map(c => c.areaName))
+  const areas = [
+    ...AREA_ORDER.filter(a => areaSet.has(a)),
+    ...Array.from(areaSet).filter(a => !AREA_ORDER.includes(a)).sort((a, b) => a.localeCompare(b, 'pt-BR')),
+  ]
 
   // Try to get vestibular dates from the first course that has them
   const vestibularDates: { date: string; href: string }[] = []

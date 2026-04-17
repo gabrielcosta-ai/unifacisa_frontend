@@ -7,28 +7,24 @@ export function HeroHome() {
         <div className={styles.heroOverlay}>
           <h1 className={styles.heroTitle}>Não dá para comparar</h1>
           <p className={styles.heroSubtitle}>
-            Experiência de ensino realmente superior, seja bem-vindo(a) à Unifacisa.
+            Experiência de ensino realmente superior,{'\n'}seja bem-vindo(a) à <span className={styles.unifacisaUnderline}>Unifacisa</span>.
           </p>
         </div>
 
-        <div className={styles.heroTopRight}>
+        <div className={styles.heroBottomRight}>
           <a href="#vestibular" className={styles.vestibularBtn}>
             Vestibular 2026 &bull; Inscreva-se
           </a>
-        </div>
-
-        <div className={styles.heroBottomRight}>
-          <a href="#cursos" className={styles.coursesBtn}>
-            Conheça todos os nossos cursos
-          </a>
-          <span className={styles.timeIndicator}>01:19</span>
         </div>
       </div>
 
       <div className={styles.belowHero}>
         <h2 className={styles.belowHeroTitle}>
-          Aprender fazendo: conheça a excelência Unifacisa
+          <span className={styles.underline}>Aprender fazendo:</span>{'\n'}conheça a excelência Unifacisa
         </h2>
+        <a href="/cursos" className={styles.coursesBtn}>
+          Ver todos os cursos e modalidade
+        </a>
       </div>
 
       <hr className={styles.divider} />

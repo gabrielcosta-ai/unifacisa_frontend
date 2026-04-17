@@ -32,10 +32,11 @@ export function NavSecondary({ breadcrumb }: NavSecondaryProps) {
             Alumini
           </a>
           <a href="#" className={styles.link}>
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 5v7M6 5C6 3.34 7.34 2 9 2M6 12c0 1.66 1.34 3 3 3" stroke="#323232" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
-              <path d="M11 6.5c.83.5 1.5 1.5 1.5 2.5s-.67 2-1.5 2.5" stroke="#323232" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
-              <path d="M13 5c1.1.8 2 2.2 2 3.5s-.9 2.7-2 3.5" stroke="#323232" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+            <svg width="21" height="21" viewBox="50 49 130 130" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0,225) scale(0.1,-0.1)" fill="#323232" stroke="none">
+                <path d="M1001 1676 c-8 -9 -11 -48 -9 -112 3 -96 4 -99 27 -102 32 -5 41 12 41 86 l0 62 197 0 197 0 -85 -57 -84 -58 -5 -340 -5 -340 -107 -3 -108 -3 0 73 c0 84 -8 101 -41 96 -23 -3 -24 -6 -27 -107 -2 -67 1 -108 9 -117 9 -11 43 -14 145 -14 l134 0 0 -79 c0 -56 4 -82 14 -90 18 -16 23 -13 194 101 l132 88 0 453 c0 339 -3 456 -12 465 -19 19 -591 17 -607 -2z m549 -486 l0 -389 -87 -59 c-49 -32 -94 -62 -100 -66 -10 -6 -13 74 -13 386 l0 393 98 62 c53 34 98 63 100 63 1 0 2 -175 2 -390z"/>
+                <path d="M997 1413 c-18 -17 -2 -47 48 -97 30 -29 55 -56 55 -60 0 -3 -102 -7 -226 -8 -196 -3 -228 -5 -237 -19 -6 -9 -7 -24 -4 -33 6 -14 33 -16 237 -16 126 0 230 -4 230 -8 0 -4 -25 -32 -55 -62 -59 -58 -67 -83 -34 -100 18 -10 31 -1 120 86 62 62 99 105 99 119 0 28 -178 205 -206 205 -11 0 -24 -3 -27 -7z"/>
+              </g>
             </svg>
             Sou Unifacisa
           </a>
