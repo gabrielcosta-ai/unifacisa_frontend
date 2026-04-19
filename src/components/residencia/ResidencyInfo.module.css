@@ -1,0 +1,108 @@
+.section {
+  display: flex;
+  gap: 64px;
+  padding: 80px var(--content-padding, 128px);
+}
+
+.left {
+  flex: 1;
+}
+
+.overline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 125%;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 24px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.05em;
+  margin-bottom: 32px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #44FF00;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.outlineButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #FFF;
+  border: 3px solid #0153FF;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0153FF;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quoteIcon {
+  font-size: 197.59px;
+  line-height: 90%;
+  color: #0153FF;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.quote {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 140%;
+  color: #000;
+  letter-spacing: -0.05em;
+  margin-bottom: 24px;
+}
+
+.author {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000;
+  letter-spacing: -0.05em;
+}

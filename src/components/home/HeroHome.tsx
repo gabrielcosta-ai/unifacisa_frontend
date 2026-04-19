@@ -1,29 +1,88 @@
 import styles from './HeroHome.module.css'
 
-export function HeroHome() {
+interface HeroHomeProps {
+  heading?: string
+  subheading?: string
+  backgroundImage?: { url: string } | null
+  vestibularBtnLabel?: string
+  vestibularBtnHref?: string
+  belowTitle?: string
+  coursesBtnLabel?: string
+  coursesBtnHref?: string
+}
+
+export function HeroHome({
+  heading = 'Não dá para comparar',
+  subheading = 'Experiência de ensino realmente superior,\nseja bem-vindo(a) à Unifacisa.',
+  backgroundImage,
+  vestibularBtnLabel = 'Vestibular 2026 · Inscreva-se',
+  vestibularBtnHref = '#vestibular',
+  belowTitle = 'Aprender fazendo:\nconheça a excelência Unifacisa',
+  coursesBtnLabel = 'Ver todos os cursos e modalidade',
+  coursesBtnHref = '/cursos',
+}: HeroHomeProps) {
+  const bgUrl = backgroundImage?.url || '/images/home/campus-fachada-alunos.png'
+
+  const belowTitleParts = belowTitle.split('\n')
+  const belowTitleFirst = belowTitleParts[0]
+  const belowTitleRest = belowTitleParts.slice(1).join('\n')
+
+  const subheadingParts = subheading.split('\n')
+
   return (
     <section className={styles.section}>
       <div className={styles.heroImageWrapper}>
+        <video
+          className={styles.heroVideo}
+          src="/videos/hero-home.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
         <div className={styles.heroOverlay}>
-          <h1 className={styles.heroTitle}>Não dá para comparar</h1>
+          <h1 className={styles.heroTitle}>{heading}</h1>
           <p className={styles.heroSubtitle}>
-            Experiência de ensino realmente superior,{'\n'}seja bem-vindo(a) à <span className={styles.unifacisaUnderline}>Unifacisa</span>.
+            {subheadingParts.map((part, i) => {
+              if (i === subheadingParts.length - 1) {
+                const unifacisaIndex = part.indexOf('Unifacisa')
+                if (unifacisaIndex !== -1) {
+                  const before = part.slice(0, unifacisaIndex)
+                  const after = part.slice(unifacisaIndex + 'Unifacisa'.length)
+                  return (
+                    <span key={i}>
+                      {before}
+                      <span className={styles.unifacisaUnderline}>Unifacisa</span>
+                      {after}
+                    </span>
+                  )
+                }
+                return <span key={i}>{part}</span>
+              }
+              return (
+                <span key={i}>
+                  {part}
+                  {'\n'}
+                </span>
+              )
+            })}
           </p>
         </div>
 
         <div className={styles.heroBottomRight}>
-          <a href="#vestibular" className={styles.vestibularBtn}>
-            Vestibular 2026 &bull; Inscreva-se
+          <a href={vestibularBtnHref} className={styles.vestibularBtn}>
+            {vestibularBtnLabel}
           </a>
         </div>
       </div>
 
       <div className={styles.belowHero}>
         <h2 className={styles.belowHeroTitle}>
-          <span className={styles.underline}>Aprender fazendo:</span>{'\n'}conheça a excelência Unifacisa
+          <span className={styles.underline}>{belowTitleFirst}</span>
+          {belowTitleRest ? `\n${belowTitleRest}` : ''}
         </h2>
-        <a href="/cursos" className={styles.coursesBtn}>
-          Ver todos os cursos e modalidade
+        <a href={coursesBtnHref} className={styles.coursesBtn}>
+          {coursesBtnLabel}
         </a>
       </div>
 

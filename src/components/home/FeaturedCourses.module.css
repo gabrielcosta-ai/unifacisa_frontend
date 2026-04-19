@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  padding: 80px var(--content-padding);
+  padding: 20px var(--content-padding) 80px;
 }
 
 .overline {
@@ -10,7 +10,7 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .grid {
@@ -20,12 +20,12 @@
 
 .card {
   position: relative;
-  width: 581px;
-  height: 737px;
-  border-radius: 36px;
+  width: 533px;
+  height: 629px;
+  border-radius: 35.55px;
   overflow: hidden;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   flex-shrink: 0;
 }
 
@@ -48,7 +48,7 @@
 
 .areaName {
   font-weight: 700;
-  font-size: 31px;
+  font-size: 30.6px;
   line-height: 39px;
   color: #FFFFFF;
 }
@@ -57,24 +57,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 72px;
+  padding: 5.9px 7.9px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30.6px;
   font-weight: 400;
-  font-size: 8px;
+  font-size: 7.9px;
   line-height: 10px;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .alumniPill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 72px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 31px;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
@@ -94,10 +93,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 26px;
-  border-radius: 72px;
+  padding: 17.8px 26px;
+  border-radius: 71.5px;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 23.7px;
   line-height: 30px;
   color: #000000;
 }
@@ -115,12 +114,13 @@
 }
 
 .arrowBtn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
+  width: 65px;
+  height: 65px;
+  border-radius: 210px;
+  background: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transform: rotate(0deg);
 }

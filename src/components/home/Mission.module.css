@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  padding: 80px 105px;
+  padding: 80px var(--content-padding);
 }
 
 .card {
@@ -31,15 +31,20 @@
   line-height: 75px;
   letter-spacing: -0.05em;
   color: #FFFFFF;
-  max-width: 1200px;
+  max-width: 960px;
   margin-bottom: 48px;
 }
 
 .author {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 32px;
-  line-height: 40px;
+  line-height: 75px;
+  letter-spacing: -0.05em;
   color: #FFFFFF;
+}
+
+.authorRole {
+  font-weight: 400;
 }
 
 .btnWrapper {
@@ -52,9 +57,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 26px 48px;
+  padding: 26px 26.3px;
   background: #FFFFFF;
-  border-radius: 128px;
+  border-radius: 72.5px;
+  width: 355px;
+  height: 82px;
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;

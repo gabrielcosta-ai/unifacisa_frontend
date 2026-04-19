@@ -1,7 +1,27 @@
-import Image from 'next/image'
 import styles from './NewsSection.module.css'
+import { VideoClickWrapper } from '@/components/ui/VideoClickWrapper'
 
-const newsItems = [
+interface NewsSectionProps {
+  newsOverline?: string
+  newsTitle?: string
+  newsImage?: { url: string } | null
+  newsItems?: Array<{ date: string; headline: string; href?: string }>
+  newsBtnLabel?: string
+  newsBtnHref?: string
+  newsVideoUrl?: string
+  newsVideoOverlayTitle?: string
+  newsVideoDuration?: string
+  eventsOverline?: string
+  eventsImage?: { url: string } | null
+  events?: Array<{ date: string; title: string; href?: string }>
+  eventsBtnLabel?: string
+  eventsBtnHref?: string
+  eventsVideoUrl?: string
+  eventsVideoOverlayTitle?: string
+  eventsVideoDatePill?: string
+}
+
+const defaultNewsItems = [
   {
     date: '01/03/2026',
     headline:
@@ -18,46 +38,111 @@ const newsItems = [
   },
 ]
 
-const events = [
-  'Projeto Integrador - Direito e Arte',
-  'Basquete Unifacisa SOCIAL - Núcleo ESAC',
-  'Formação Continuada de Professores',
-  'Formação Continuada de Professores do Curso de Medicina',
+const defaultEvents = [
+  { date: '04.Maio_2026', title: 'Projeto Integrador – \u201CDireito e Arte\u201D' },
+  { date: '09.Maio_2026', title: 'Basquete Unifacisa SOCIAL – Núcleo ESAC' },
+  { date: '14.junho_2026', title: 'Formação Continuada de Professores' },
+  { date: '22.Junho_2026', title: 'Formação Continuada de Professores do Curso de Medicina' },
+  { date: '09.Maio_2026', title: 'Basquete Unifacisa SOCIAL – Núcleo ESAC' },
+  { date: '14.junho_2026', title: 'Formação Continuada de Professores' },
 ]
 
-export function NewsSection() {
+export function NewsSection({
+  newsOverline = 'Acontecimentos',
+  newsTitle,
+  newsItems,
+  newsBtnLabel = 'Ver todas as notícias',
+  newsBtnHref,
+  newsVideoUrl = '/videos/alumni-stories.mp4',
+  newsVideoOverlayTitle = 'Curso de Direito da Unifacisa promove palestras com literatura clássica e cultura popular nordestina',
+  newsVideoDuration = '01:19',
+  eventsOverline = 'Próximos eventos',
+  events = defaultEvents,
+  eventsBtnLabel = 'Ver todos os eventos',
+  eventsBtnHref,
+  eventsVideoUrl = '/videos/recepcao-calouros.mp4',
+  eventsVideoOverlayTitle = 'Recepção de calouros',
+  eventsVideoDatePill = '04.Maio_2026',
+}: NewsSectionProps) {
+  const resolvedNewsItems = newsItems ?? defaultNewsItems
+  const usingDefaultNews = !newsItems
+
   return (
     <section className={styles.section}>
       {/* 8a - Acontecimentos */}
       <div className={styles.newsBlock}>
-        <p className={styles.overline}>Acontecimentos</p>
-        <h2 className={styles.newsTitle}>Nosso ecossistema em movimento</h2>
+        <p className={styles.overline}>{newsOverline}</p>
+        <h2 className={styles.newsTitle}>
+          {newsTitle ? newsTitle : <>Nosso ecossistema em<br />movimento</>}
+        </h2>
 
         <div className={styles.newsContent}>
-          <div className={styles.newsImage}>
-            <Image
-              src="/images/home/professor-biblioteca-orientacao.png"
-              alt="Acontecimentos Unifacisa"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: 'cover' }}
+          {/* Card de vídeo com placeholder cinza */}
+          <VideoClickWrapper videoSrc={newsVideoUrl} className={styles.newsImage}>
+            <video
+              className={styles.videoBackground}
+              src={newsVideoUrl}
+              autoPlay
+              muted
+              loop
+              playsInline
             />
             <span className={styles.newsPill}>Alumni Stories</span>
-            <div className={styles.playIcon}>&#9654;</div>
-          </div>
+            <svg className={styles.playIcon} viewBox="0 0 33 40" fill="currentColor">
+              <path d="M33 20L0 40V0L33 20Z" />
+            </svg>
+            <div className={styles.cardBottomOverlay}>
+              <p className={styles.cardOverlayTitle}>
+                {newsVideoOverlayTitle}
+              </p>
+              <span className={styles.cardOverlayDuration}>{newsVideoDuration}</span>
+            </div>
+          </VideoClickWrapper>
 
           <div className={styles.newsRight}>
-            {newsItems.map((item) => (
-              <div key={item.headline}>
-                <p className={styles.newsItemDate}>{item.date}</p>
-                <p className={styles.newsItemHeadline}>
-                  {item.headline}
-                  <span className={styles.newsArrow}>&#8599;</span>
-                </p>
-              </div>
-            ))}
+            {usingDefaultNews ? (
+              <>
+                <div>
+                  <p className={styles.newsItemDate}>01/03/2026</p>
+                  <p className={styles.newsItemHeadline}>
+                    A Unifacisa, em parceria com a Fundação Pedro<br />
+                    Américo e o Hospital HELP promovem<br />
+                    campanha para mulheres em situação de<br />
+                    vulnerabilidade <span className={styles.newsArrow}>&rarr;</span>
+                  </p>
+                </div>
+                <div>
+                  <p className={styles.newsItemDate}>01/03/2026</p>
+                  <p className={styles.newsItemHeadline}>
+                    Unifacisa recebe evento que conecta alunos de<br />
+                    tecnologia ao mercado de trabalho <span className={styles.newsArrow}>&rarr;</span>
+                  </p>
+                </div>
+                <div>
+                  <p className={styles.newsItemDate}>01/03/2026</p>
+                  <p className={styles.newsItemHeadline}>
+                    Nota Oficial <span className={styles.newsArrow}>&rarr;</span>
+                  </p>
+                </div>
+              </>
+            ) : (
+              resolvedNewsItems.map((item, i) => (
+                <div key={i}>
+                  <p className={styles.newsItemDate}>{item.date}</p>
+                  <p className={styles.newsItemHeadline}>
+                    {item.headline} <span className={styles.newsArrow}>&rarr;</span>
+                  </p>
+                </div>
+              ))
+            )}
 
-            <button className={styles.blueBtn}>Ver todas as notícias</button>
+            <div className={styles.btnRight}>
+              {newsBtnHref ? (
+                <a href={newsBtnHref} className={styles.blueBtn}>{newsBtnLabel}</a>
+              ) : (
+                <button className={styles.blueBtn}>{newsBtnLabel}</button>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -66,29 +151,46 @@ export function NewsSection() {
 
       {/* 8b - Próximos Eventos */}
       <div className={styles.eventsBlock}>
-        <p className={styles.overline}>Próximos eventos</p>
+        <p className={styles.overline}>{eventsOverline}</p>
 
         <div className={styles.eventsContent}>
-          <div className={styles.eventsImage}>
-            <Image
-              src="/images/home/sala-estudo-colaborativa.png"
-              alt="Próximos eventos Unifacisa"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: 'cover' }}
+          {/* Card de vídeo com placeholder cinza */}
+          <VideoClickWrapper videoSrc={eventsVideoUrl} className={styles.eventsImage}>
+            <video
+              className={styles.videoBackground}
+              src={eventsVideoUrl}
+              autoPlay
+              muted
+              loop
+              playsInline
             />
             <span className={styles.eventsPill}>Destaque</span>
-          </div>
+            <svg className={styles.playIcon} viewBox="0 0 33 40" fill="currentColor">
+              <path d="M33 20L0 40V0L33 20Z" />
+            </svg>
+            <div className={styles.cardBottomOverlay}>
+              <p className={styles.cardOverlayTitle}>
+                {eventsVideoOverlayTitle}
+              </p>
+              <span className={styles.eventDatePill}>{eventsVideoDatePill}</span>
+            </div>
+          </VideoClickWrapper>
 
           <div className={styles.eventsRight}>
-            {events.map((name) => (
-              <div key={name} className={styles.eventItem}>
-                <span className={styles.eventName}>{name}</span>
-                <button className={styles.eventBtn}>Inscreva-se</button>
-              </div>
+            {events.map((event, i) => (
+              <a key={i} href={event.href || '#'} className={styles.eventItem}>
+                <span className={styles.eventDatePillSmall}>{event.date}</span>
+                <span className={styles.eventName}>{event.title}</span>
+              </a>
             ))}
 
-            <button className={styles.purpleBtn}>Veja a agenda completa</button>
+            <div className={styles.btnRight}>
+              {eventsBtnHref ? (
+                <a href={eventsBtnHref} className={styles.purpleBtn}>{eventsBtnLabel}</a>
+              ) : (
+                <button className={styles.purpleBtn}>{eventsBtnLabel}</button>
+              )}
+            </div>
           </div>
         </div>
       </div>

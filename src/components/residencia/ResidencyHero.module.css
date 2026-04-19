@@ -1,0 +1,18 @@
+.section {
+  padding: 80px var(--content-padding, 128px);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 120%;
+  color: #0153FF;
+  letter-spacing: -0.05em;
+  max-width: 1100px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+  margin: 0 var(--content-padding, 128px);
+}

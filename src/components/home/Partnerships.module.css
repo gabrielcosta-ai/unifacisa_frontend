@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 64px;
+  gap: 32px;
   margin-bottom: 48px;
 }
 
@@ -35,14 +35,15 @@
 }
 
 .headerRight {
-  flex: 0 0 500px;
+  flex: 0 0 600px;
   padding-top: 40px;
 }
 
 .description {
   font-weight: 400;
   font-size: 32px;
-  line-height: 42px;
+  line-height: 45px;
+  letter-spacing: -0.05em;
   color: #787878;
 }
 
@@ -63,13 +64,23 @@
   width: 306px;
   height: 185px;
   border-radius: 23px;
-  background: #F2F2F2;
+  background: #FFFFFF;
   flex-shrink: 0;
 }
 
-/* 6b - News */
+/* 6b - News (2 colunas) */
 .newsSection {
   margin-top: 64px;
+  display: flex;
+  gap: 32px;
+}
+
+.newsLeft {
+  flex: 0 0 15%;
+}
+
+.newsRight {
+  flex: 1;
 }
 
 .newsOverline {
@@ -79,7 +90,6 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 32px;
 }
 
 .newsList {
@@ -90,18 +100,12 @@
 }
 
 .newsItem {
+  font-weight: 400;
   font-size: 42px;
-  line-height: 52px;
+  line-height: 45px;
+  letter-spacing: -0.05em;
   color: var(--color-black);
   text-decoration: underline;
-}
-
-.newsItemBold {
-  font-weight: 700;
-}
-
-.newsItemRegular {
-  font-weight: 400;
 }
 
 .newsArrow {
@@ -147,9 +151,9 @@
 
 .previewCard {
   position: relative;
-  width: 527px;
-  height: 493px;
-  border-radius: 38px;
+  width: 535px;
+  height: 500px;
+  border-radius: 38.6px;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.15) 100%), #AAAAAA;
   flex-shrink: 0;
@@ -166,7 +170,8 @@
 
 .previewCardLabel {
   font-weight: 700;
-  font-size: 35px;
-  line-height: 44px;
+  font-size: 35.6px;
+  line-height: 46px;
+  letter-spacing: -0.05em;
   color: var(--color-white);
 }

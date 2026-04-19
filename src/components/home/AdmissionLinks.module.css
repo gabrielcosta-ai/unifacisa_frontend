@@ -1,23 +1,40 @@
 .section {
   width: 100%;
   padding: 0 133px;
+  margin-bottom: 96px;
 }
 
 .card {
   background: var(--color-primary);
-  border-radius: 51px;
-  height: 880px;
-  padding: 64px 80px;
+  border-radius: 51.5px;
+  padding: 80px 96px 80px;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.topRow {
+.eyebrow {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 160px;
+}
+
+.expandBtn {
+  position: absolute;
+  top: 64px;
+  right: 64px;
+  width: 48px;
+  height: 48px;
+  border-radius: 128px;
+  background: #FFFFFF;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 48px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .title {
@@ -27,24 +44,12 @@
   letter-spacing: -0.05em;
   color: var(--color-white);
   max-width: 900px;
-}
-
-.expandBtn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 20px;
-  color: var(--color-black);
+  margin-bottom: 40px;
 }
 
 .columns {
   display: flex;
-  gap: 120px;
+  gap: 80px;
   flex: 1;
 }
 
@@ -59,19 +64,26 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-white);
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .linkList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
 }
 
 .link {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 35px;
   line-height: 55px;
+  letter-spacing: -0.05em;
   color: var(--color-white);
+  text-decoration: none;
+  margin: -8px 0px;
+}
+
+.linkBold {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
