@@ -120,7 +120,6 @@ export default async function SobreNosPage() {
       />
 
       <CourseNumbers
-        overline="NÚMEROS DA FACULDADE"
         stats={statsItems}
         imageSrc={stats.image ? getMediaUrl(stats.image) : ''}
         imageCaption={stats.imageCaption ? String(stats.imageCaption) : 'Hospital Help: Uma parceria que transforma a formação médica e atende a região de Campina Grande'}
