@@ -6,13 +6,15 @@ type StructureItem = {
 }
 
 type StructureProps = {
+  overline?: string
   title: string
   items: StructureItem[]
 }
 
-export function Structure({ title, items }: StructureProps) {
+export function Structure({ overline = 'ESTRUTURA', title, items }: StructureProps) {
   return (
     <section className={styles.section}>
+      {overline && <p className={styles.overline}>{overline}</p>}
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.grid}>
         {items.map((item, i) => (

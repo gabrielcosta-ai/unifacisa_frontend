@@ -227,6 +227,7 @@ export default async function CursoPage({ params }: Props) {
           linkText={course.featureBanner.linkText || ''}
           linkHref={course.featureBanner.linkHref || '#'}
           imageSrc={getMediaUrl(course.featureBanner.image)}
+          videoUrl={course.featureBanner.videoUrl ? mediaUrl(String(course.featureBanner.videoUrl)) : '/videos/hospital-help.mp4'}
           disclaimer={course.featureBanner.disclaimer || undefined}
         />
       )}
