@@ -9,11 +9,11 @@ import {
 } from '@/components/residencia'
 import type { Program } from '@/components/residencia'
 
-const API_URL = process.env.NEXT_PUBLIC_PAYLOAD_API_URL || 'http://localhost:3000/api'
+import { payloadFindGlobal, mediaUrl } from '@/lib/payload'
 
 function getMediaUrl(media: unknown): string {
   if (media && typeof media === 'object' && 'url' in media) {
-    return (media as { url: string }).url || ''
+    return mediaUrl((media as { url: string }).url) || ''
   }
   return ''
 }
@@ -45,20 +45,13 @@ const fallbackHelp: Program[] = [
   { name: 'Psiquiatria', duration: '4 anos', period: 'Integral' },
 ]
 
-async function getResidenciaSettings(): Promise<Record<string, unknown> | null> {
-  try {
-    const res = await fetch(`${API_URL}/globals/residencia-settings`, {
-      next: { revalidate: 60 },
-    })
-    if (!res.ok) return null
-    return await res.json()
-  } catch {
-    return null
-  }
-}
-
 export default async function ResidenciaPage() {
-  const data = await getResidenciaSettings()
+  let data: Record<string, unknown> | null = null
+  try {
+    data = await payloadFindGlobal('residencia-settings')
+  } catch {
+    // fallback to defaults
+  }
 
   const hero = (data?.hero as Record<string, unknown>) || {}
   const info = (data?.info as Record<string, unknown>) || {}
