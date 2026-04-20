@@ -86,6 +86,7 @@ export function NewsSection({
               muted
               loop
               playsInline
+              preload="metadata"
             />
             <span className={styles.newsPill}>Alumni Stories</span>
             <svg className={styles.playIcon} viewBox="0 0 33 40" fill="currentColor">
@@ -163,6 +164,7 @@ export function NewsSection({
               muted
               loop
               playsInline
+              preload="metadata"
             />
             <span className={styles.eventsPill}>Destaque</span>
             <svg className={styles.playIcon} viewBox="0 0 33 40" fill="currentColor">

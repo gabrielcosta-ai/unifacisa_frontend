@@ -13,7 +13,7 @@ export function Mission({
   quote = 'Acreditamos que o <strong>conhecimento abre as portas do mundo</strong> e que aprender fazendo transforma a maneira como você constrói suas oportunidades. Estamos comprometidos em formar pessoas que transformam o mundo.',
   author = '<strong>Diego Gadelha</strong>, CEO do Grupo Unifacisa',
   buttonLabel = 'Conheça nossa visão',
-  buttonHref = '#visao',
+  buttonHref = '/sobre-nos',
 }: MissionProps) {
   return (
     <section className={styles.section}>

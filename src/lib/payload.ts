@@ -1,8 +1,15 @@
 const API_URL = process.env.NEXT_PUBLIC_PAYLOAD_API_URL || 'http://localhost:3000/api'
 const BACKEND_URL = API_URL.replace(/\/api$/, '')
+const API_KEY = process.env.PAYLOAD_API_READ_KEY || ''
 
 export async function payloadGet(endpoint: string) {
-  const res = await fetch(`${API_URL}/${endpoint}`, { cache: 'no-store' })
+  const headers: Record<string, string> = {}
+  if (API_KEY) headers['x-api-key'] = API_KEY
+
+  const res = await fetch(`${API_URL}/${endpoint}`, {
+    cache: 'no-store',
+    headers,
+  })
   if (!res.ok) throw new Error(`Payload API error: ${res.status}`)
   return res.json()
 }

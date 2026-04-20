@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import styles from './Partnerships.module.css'
 
+const DEFAULT_DESCRIPTION = 'Colaboramos com grandes organizações para garantir excelência no ensino e ampliar as oportunidades com o mercado.'
+
 interface PartnershipsProps {
   overline?: string
   title?: string
@@ -38,7 +40,7 @@ const defaultPreviewCards = [
 export function Partnerships({
   overline = 'Parcerias em destaque',
   title = 'Parcerias estratégicas para você ir além conosco',
-  description = 'Colaboramos com grandes organizações para garantir excelência no ensino e ampliar as oportunidades com o mercado.',
+  description = DEFAULT_DESCRIPTION,
   logos = defaultLogos,
   newsOverline,
   news = defaultNews,
@@ -47,6 +49,8 @@ export function Partnerships({
   previewOverline = 'Conheça mais sobre nossa estrutura',
   previewCards = defaultPreviewCards,
 }: PartnershipsProps) {
+  const isCustomDescription = description !== DEFAULT_DESCRIPTION
+
   return (
     <section className={styles.section}>
       {/* 6a - Header */}
@@ -57,10 +61,14 @@ export function Partnerships({
         </div>
         <div className={styles.headerRight}>
           <p className={styles.description}>
-            <span style={{ whiteSpace: 'nowrap' }}>Colaboramos com grandes organizações</span><br />
-            <span style={{ whiteSpace: 'nowrap' }}>para garantir excelência no ensino e</span><br />
-            <span style={{ whiteSpace: 'nowrap' }}>ampliar as oportunidades com o</span><br />
-            <span style={{ whiteSpace: 'nowrap' }}>mercado.</span>
+            {isCustomDescription ? description : (
+              <>
+                <span style={{ whiteSpace: 'nowrap' }}>Colaboramos com grandes organizações</span><br />
+                <span style={{ whiteSpace: 'nowrap' }}>para garantir excelência no ensino e</span><br />
+                <span style={{ whiteSpace: 'nowrap' }}>ampliar as oportunidades com o</span><br />
+                <span style={{ whiteSpace: 'nowrap' }}>mercado.</span>
+              </>
+            )}
           </p>
         </div>
       </div>
@@ -81,7 +89,7 @@ export function Partnerships({
       <div className={styles.newsSection}>
         <div className={styles.newsLeft}>
           <p className={styles.newsOverline}>
-            Atualizações sobre<br />nossas parcerias
+            {newsOverline ? newsOverline : (<>Atualizações sobre<br />nossas parcerias</>)}
           </p>
         </div>
 

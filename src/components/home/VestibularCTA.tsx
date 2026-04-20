@@ -1,6 +1,9 @@
 import styles from './VestibularCTA.module.css'
 
+const DEFAULT_HEADLINE = 'Pronto para fazer parte? Inscreva-se agora no vestibular Unifacisa.'
+
 interface VestibularCTAProps {
+  headline?: string
   vestibularInfo?: string
   cardOverline?: string
   cardTitle?: string
@@ -11,6 +14,7 @@ interface VestibularCTAProps {
 }
 
 export function VestibularCTA({
+  headline = DEFAULT_HEADLINE,
   vestibularInfo = 'Vestibular Medicina: Provas 16 e 22 de maio',
   cardOverline = 'A hora chegou',
   cardTitle = 'Escolha como quer ser atendido:',
@@ -19,15 +23,25 @@ export function VestibularCTA({
   outlineBtnLabel = 'Ligue para a Unifacisa',
   outlineBtnHref = '#consultor',
 }: VestibularCTAProps) {
+  const isCustomHeadline = headline !== DEFAULT_HEADLINE
+
   return (
     <section className={styles.section}>
       <div className={styles.content}>
         <div className={styles.leftSide}>
           <h2 className={styles.title}>
-            Pronto para fazer<br />
-            parte? <a href={greenBtnHref} className={styles.titleLink}>Inscreva-se<br />
-            agora no vestibular<br />
-            Unifacisa.</a>
+            {isCustomHeadline ? (
+              headline.split('\n').map((line, i, arr) => (
+                <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+              ))
+            ) : (
+              <>
+                Pronto para fazer<br />
+                parte? <a href={greenBtnHref} className={styles.titleLink}>Inscreva-se<br />
+                agora no vestibular<br />
+                Unifacisa.</a>
+              </>
+            )}
           </h2>
           <p className={styles.vestibularInfo}>{vestibularInfo}</p>
         </div>
