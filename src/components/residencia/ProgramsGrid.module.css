@@ -16,8 +16,8 @@
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -26,7 +26,7 @@
   background: #0153FF;
   border-radius: 32px;
   padding: 32px 88px 32px 32px;
-  width: 533px;
+  width: auto;
   min-height: 165px;
   display: flex;
   flex-direction: column;
@@ -53,22 +53,10 @@
   top: 24px;
   width: 64px;
   height: 64px;
-  border-radius: 213px;
-  background: #FFF;
-  border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-
-.arrowIcon {
-  color: #0153FF;
-  font-size: 24px;
-  line-height: 1;
-  transform: rotate(-45deg);
-  display: inline-block;
 }
 
 .pills {

@@ -19,7 +19,6 @@
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: -0.05em;
   margin-bottom: 48px;
-  max-width: 900px;
 }
 
 .grid {
@@ -42,7 +41,7 @@
 
 .plusButton {
   position: absolute;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   width: 64px;
   height: 64px;
@@ -56,4 +55,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.ctaDivider {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.dividerLine {
+  width: 533px;
+  height: 0;
+  border-top: 1px solid rgba(135, 135, 135, 0.5);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  background: #FFF;
+  border: 3px solid #0153FF;
+  border-radius: 128px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0153FF;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
 }

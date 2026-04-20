@@ -4,12 +4,16 @@ interface ResidencyGalleryProps {
   overline?: string
   title?: string
   images?: { url: string; alt: string }[]
+  ctaLabel?: string
+  ctaHref?: string
 }
 
 export function ResidencyGallery({
-  overline = 'EXPERIÊNCIA',
+  overline = 'EXPERIÊNCIA UNIFACISA',
   title = 'A prática que forma grandes especialistas',
   images,
+  ctaLabel = 'Conheça mais da nossa estrutura',
+  ctaHref = '#estrutura',
 }: ResidencyGalleryProps) {
   const placeholders = Array.from({ length: 3 }, (_, i) => ({
     url: '',
@@ -37,6 +41,13 @@ export function ResidencyGallery({
             </button>
           </div>
         ))}
+      </div>
+      <div className={styles.ctaDivider}>
+        <div className={styles.dividerLine} />
+        <a href={ctaHref} className={styles.ctaButton}>
+          {ctaLabel}
+        </a>
+        <div className={styles.dividerLine} />
       </div>
     </section>
   )

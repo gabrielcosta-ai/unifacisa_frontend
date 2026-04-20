@@ -25,6 +25,11 @@ export function DynamicNavSecondary() {
         .replace(/\b\w/g, (c) => c.toUpperCase())
       breadcrumb.push({ label: courseName.toUpperCase() })
     }
+  } else if (segments[0] === 'residencia') {
+    breadcrumb.push({ label: 'PROGRAMAS', href: '/cursos' })
+    breadcrumb.push({ label: 'RESIDÊNCIA' })
+  } else if (segments[0] === 'sobre-nos') {
+    breadcrumb.push({ label: 'SOBRE NÓS' })
   }
 
   return <NavSecondary breadcrumb={breadcrumb} />
