@@ -96,7 +96,8 @@
   gap: 8px;
 }
 
-.columnLinks a {
+.columnLinks a,
+.columnLinks span {
   font-weight: 300;
   font-size: 20px;
   line-height: 16px;
