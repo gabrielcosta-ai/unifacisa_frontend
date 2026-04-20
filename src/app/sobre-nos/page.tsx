@@ -134,7 +134,6 @@ export default async function SobreNosPage() {
         linkText={structure.bannerSubtitle ? String(structure.bannerSubtitle) : 'Conheça o Hospital Help'}
         linkHref="#"
         imageSrc={structure.bannerImage ? getMediaUrl(structure.bannerImage) : ''}
-        videoUrl={structure.bannerVideoUrl ? mediaUrl(String(structure.bannerVideoUrl)) : ''}
         disclaimer={structure.disclaimer ? String(structure.disclaimer) : 'Aviso Legal: O uso exclusivo do Hospital Help é uma colaboração técnica entre a fundação Pedro Américo e a Unifacisa'}
       />
 
