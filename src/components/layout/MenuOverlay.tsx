@@ -1,6 +1,10 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+
+const ACTIVE_ROUTES = ['/', '/sobre-nos', '/cursos', '/residencia']
+const isActiveLink = (href?: string) => href && ACTIVE_ROUTES.some(r => href === r || href.startsWith('/cursos/'))
+const dimStyle = { opacity: 0.4, pointerEvents: 'none' as const }
 import styles from './MenuOverlay.module.css'
 import Image from 'next/image'
 
@@ -22,9 +26,9 @@ const FALLBACK: MenuData = {
     { label: 'Inscreva-se no Vestibular', href: '#', style: 'green' },
   ],
   columns: [
-    { title: 'Visão & Essência', links: [{ label: 'Sobre nós', href: '#' }, { label: 'Como pensamos', href: '#' }, { label: 'O que já construímos', href: '#' }] },
+    { title: 'Visão & Essência', links: [{ label: 'Sobre nós', href: '/sobre-nos' }, { label: 'Como pensamos', href: '#' }, { label: 'O que já construímos', href: '#' }] },
     { title: 'Institucional', links: [{ label: 'Secretaria Acadêmica', href: '#' }, { label: 'Repositório Acadêmico', href: '#' }, { label: 'CPA', href: '#' }, { label: 'Cepros', href: '#' }, { label: 'Ouvidoria', href: '#' }] },
-    { title: 'Para o estudante', links: [{ label: 'Graduação', href: '#' }, { label: 'Pós Graduação', href: '#' }, { label: 'Fellowship', href: '#' }, { label: 'Residência', href: '#' }] },
+    { title: 'Para o estudante', links: [{ label: 'Graduação', href: '/cursos' }, { label: 'Pós Graduação', href: '#' }, { label: 'Fellowship', href: '#' }, { label: 'Residência', href: '/residencia' }] },
     { title: 'Para a sociedade', links: [{ label: 'Saúde/', href: '#', style: 'bold' }, { label: 'Hospital Help', href: '#' }, { label: 'Esporte/', href: '#', style: 'bold' }, { label: 'Basquete', href: '#' }, { label: 'Social/', href: '#', style: 'bold' }, { label: 'Projetos Sociais', href: '#' }, { label: 'Eventos', href: '#' }, { label: 'Notícias', href: '#' }, { label: 'Museu', href: '#' }, { label: 'Vagas de voluntariado', href: '#' }, { label: 'Comunidade ex-alunos', href: '#' }, { label: 'Núcleos de Pesquisa', href: '#' }, { label: 'Vagas Emprego', href: '#' }] },
     { title: 'Vivência', links: [{ label: 'Abordagem Acadêmica', href: '#' }, { label: 'Ecossistema de Ensino', href: '#' }, { label: 'Experiência Unifacisa', href: '#' }] },
     { title: 'Faça parte', links: [{ label: 'Ingresso/', href: '#', style: 'bold' }, { label: 'Vestibular', href: '#' }, { label: 'Enem', href: '#' }, { label: 'Transferência', href: '#' }, { label: '2ª Graduação', href: '#' }, { label: 'Bolsas/', href: '#', style: 'bold' }, { label: 'ProBem', href: '#' }, { label: 'ProUni', href: '#' }, { label: 'Descontos/', href: '#', style: 'bold' }, { label: 'Vestibular', href: '#' }, { label: 'Enem', href: '#' }, { label: 'Transferência', href: '#' }, { label: '2ª Graduação', href: '#' }, { label: 'Convênios', href: '#' }, { label: 'Família', href: '#' }, { label: 'Ex-alunos', href: '#' }, { label: 'Financiamentos/', href: '#', style: 'bold' }, { label: 'Leme', href: '#' }, { label: 'Fies', href: '#' }] },
@@ -95,7 +99,7 @@ export function MenuOverlay({ data }: { data?: MenuData }) {
                   <>
                     <h3 className={styles.columnTitle}>{firstCol.title}</h3>
                     <div className={styles.columnLinks}>
-                      {firstCol.links?.map((l, i) => <a key={i} href={l.href}>{l.label}</a>)}
+                      {firstCol.links?.map((l, i) => <a key={i} href={l.href} style={isActiveLink(l.href) ? undefined : dimStyle}>{l.label}</a>)}
                     </div>
                   </>
                 )}
@@ -104,7 +108,7 @@ export function MenuOverlay({ data }: { data?: MenuData }) {
                     <div className={styles.columnSpacer} />
                     <h3 className={styles.columnTitle}>{secondCol.title}</h3>
                     <div className={styles.columnLinks}>
-                      {secondCol.links?.map((l, i) => <a key={i} href={l.href}>{l.label}</a>)}
+                      {secondCol.links?.map((l, i) => <a key={i} href={l.href} style={isActiveLink(l.href) ? undefined : dimStyle}>{l.label}</a>)}
                     </div>
                   </>
                 )}
@@ -116,7 +120,7 @@ export function MenuOverlay({ data }: { data?: MenuData }) {
                   <h3 className={styles.columnTitle}>{col.title}</h3>
                   <div className={styles.columnLinks}>
                     {col.links?.map((l, j) => (
-                      <a key={j} href={l.href} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</a>
+                      <a key={j} href={l.href} className={l.style === 'bold' ? styles.linkBold : undefined} style={isActiveLink(l.href) ? undefined : dimStyle}>{l.label}</a>
                     ))}
                   </div>
                 </div>
