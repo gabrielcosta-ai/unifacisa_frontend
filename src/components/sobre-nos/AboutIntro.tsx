@@ -9,8 +9,8 @@ interface AboutIntroProps {
 
 export function AboutIntro({
   title = 'Quem somos',
-  description = 'Somos uma instituicao comprometida com a excelencia no ensino, a inovacao e a transformacao social.',
-  cardOverline = 'Colaboramos com grandes organizacoes para garantir excelencia no ensino e ampliar as oportunidades com o mercado.',
+  description = 'Somos uma instituição comprometida com a excelência no ensino, a inovação e a transformação social.',
+  cardOverline = 'Colaboramos com grandes organizações para garantir excelência no ensino e ampliar as oportunidades com o mercado.',
   cardAuthor = 'Diego Gadelha, CEO do Grupo Unifacisa',
 }: AboutIntroProps) {
   return (

@@ -167,7 +167,7 @@ export default async function CursoPage({ params }: Props) {
       </section>
 
       <PhotoGallery
-        title="Sinta a atmosfera da sua formacao"
+        title="Sinta a atmosfera da sua formação"
         photos={galleryData.length > 0 ? galleryData : [
           { src: '', alt: 'Foto 1' },
           { src: '', alt: 'Foto 2' },
@@ -206,7 +206,7 @@ export default async function CursoPage({ params }: Props) {
       {semesters.length > 0 && (
         <section id="matriz">
           <Curriculum
-            title="Descubra o que voce vai aprender"
+            title="Descubra o que você vai aprender"
             semesters={semesters}
           />
         </section>
@@ -215,7 +215,7 @@ export default async function CursoPage({ params }: Props) {
       {structuresData.length > 0 && (
         <section id="estrutura">
           <Structure
-            title="Estrutura que eleva o padrao da sua formacao"
+            title="Estrutura que eleva o padrão da sua formação"
             items={structuresData}
           />
         </section>
@@ -235,7 +235,7 @@ export default async function CursoPage({ params }: Props) {
       {coordinatorData.name && (
         <section id="corpo-docente">
           <Faculty
-            title="Aprenda com quem e referencia"
+            title="Aprenda com quem é referência"
             coordinator={coordinatorData}
             professors={professorsData}
           />
