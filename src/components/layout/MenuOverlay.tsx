@@ -95,7 +95,7 @@ export function MenuOverlay({ data }: { data?: MenuData }) {
                   <>
                     <h3 className={styles.columnTitle}>{firstCol.title}</h3>
                     <div className={styles.columnLinks}>
-                      {firstCol.links?.map((l, i) => <a key={i} href={l.href}>{l.label}</a>)}
+                      {firstCol.links?.map((l, i) => !l.href || l.href === '#' ? <span key={i}>{l.label}</span> : <a key={i} href={l.href}>{l.label}</a>)}
                     </div>
                   </>
                 )}
@@ -104,7 +104,7 @@ export function MenuOverlay({ data }: { data?: MenuData }) {
                     <div className={styles.columnSpacer} />
                     <h3 className={styles.columnTitle}>{secondCol.title}</h3>
                     <div className={styles.columnLinks}>
-                      {secondCol.links?.map((l, i) => <a key={i} href={l.href}>{l.label}</a>)}
+                      {secondCol.links?.map((l, i) => !l.href || l.href === '#' ? <span key={i}>{l.label}</span> : <a key={i} href={l.href}>{l.label}</a>)}
                     </div>
                   </>
                 )}
@@ -116,7 +116,7 @@ export function MenuOverlay({ data }: { data?: MenuData }) {
                   <h3 className={styles.columnTitle}>{col.title}</h3>
                   <div className={styles.columnLinks}>
                     {col.links?.map((l, j) => (
-                      <a key={j} href={l.href} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</a>
+                      {!l.href || l.href === '#' ? <span key={j} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</span> : <a key={j} href={l.href} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</a>}
                     ))}
                   </div>
                 </div>
