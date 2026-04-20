@@ -2,11 +2,6 @@ import styles from './Footer.module.css'
 import Image from 'next/image'
 import { payloadFindGlobal } from '@/lib/payload'
 
-function FooterLink({ href, label, className }: { href?: string; label: string; className?: string }) {
-  if (!href || href === '#') return <span className={className}>{label}</span>
-  return <a href={href} className={className}>{label}</a>
-}
-
 const FALLBACK_COPYRIGHT = 'CESED - Centro de Ensino Superior e Desenvolvimento Ltda. © 2026 Todos os direitos reservados. CNPJ: 02.108.023/0001-40'
 const FALLBACK_BIG_TEXT = 'UNIFACISA, NÃO DÁ PARA COMPARAR.'
 const FALLBACK_CREDIT = 'Designed by whf.work'
@@ -102,7 +97,7 @@ export async function Footer() {
                 <h3 className={styles.columnTitle}>{columns[0].title}</h3>
                 <div className={styles.columnLinks}>
                   {columns[0].links.map((link, j) => (
-                    <FooterLink key={j} href={link.href} label={link.label} />
+                    <a key={j} href={link.href}>{link.label}</a>
                   ))}
                 </div>
               </>
@@ -112,7 +107,7 @@ export async function Footer() {
                 <h3 className={styles.columnTitle}>{columns[5].title}</h3>
                 <div className={styles.columnLinks}>
                   {columns[5].links.map((link, j) => (
-                    <FooterLink key={j} href={link.href} label={link.label} />
+                    <a key={j} href={link.href}>{link.label}</a>
                   ))}
                 </div>
               </div>
@@ -124,7 +119,7 @@ export async function Footer() {
               <h3 className={styles.columnTitle}>{col.title}</h3>
               <div className={styles.columnLinks}>
                 {col.links.map((link, j) => (
-                  <FooterLink key={j} href={link.href} label={link.label} className={link.style === 'bold' ? styles.linkBold : undefined} />
+                  <a key={j} href={link.href} className={link.style === 'bold' ? styles.linkBold : undefined}>{link.label}</a>
                 ))}
               </div>
             </div>
