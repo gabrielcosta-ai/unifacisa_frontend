@@ -16,17 +16,17 @@ interface AdmissionLinksProps {
 }
 
 const defaultLeftLinks: LinkItem[] = [
-  { boldPart: 'Enem:', restText: ' tudo o que você precisa saber', href: '#' },
-  { boldPart: 'Vestibular,', restText: ' inscreva-se hoje.', href: '#' },
-  { boldPart: 'Segunda graduação,', restText: ' acesse o guia.', href: '#' },
-  { boldPart: 'Transferência,', restText: ' veja o passo a passo.', href: '#' },
+  { boldPart: 'Enem:', restText: ' tudo o que você precisa saber', href: '/cursos' },
+  { boldPart: 'Vestibular,', restText: ' inscreva-se hoje.', href: '/cursos' },
+  { boldPart: 'Segunda graduação,', restText: ' acesse o guia.', href: '/cursos' },
+  { boldPart: 'Transferência,', restText: ' veja o passo a passo.', href: '/cursos' },
 ]
 
 const defaultRightLinks: LinkItem[] = [
-  { boldPart: 'Pós:', restText: ' conheça o processo de admissão', href: '#' },
-  { boldPart: 'Fellowship:', restText: ' entenda como funciona', href: '#' },
-  { boldPart: 'Residência:', restText: ' critérios para ingresso', href: '#' },
-  { boldPart: 'Bolsas e descontos:', restText: ' regras e modalidades', href: '#' },
+  { boldPart: 'Pós:', restText: ' conheça o processo de admissão', href: '/cursos' },
+  { boldPart: 'Fellowship:', restText: ' entenda como funciona', href: '/cursos' },
+  { boldPart: 'Residência:', restText: ' critérios para ingresso', href: '/residencia' },
+  { boldPart: 'Bolsas e descontos:', restText: ' regras e modalidades', href: '/cursos' },
 ]
 
 export function AdmissionLinks({

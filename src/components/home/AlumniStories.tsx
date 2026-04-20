@@ -47,6 +47,7 @@ export function AlumniStories({ title, stories }: AlumniStoriesProps) {
                   muted
                   loop
                   playsInline
+                  preload="metadata"
                 />
               )}
               <div className={styles.cardOverlay}>

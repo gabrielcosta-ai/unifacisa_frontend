@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './CourseVideo.module.css'
 
 type CourseVideoProps = {
@@ -21,7 +22,7 @@ export function CourseVideo({ title, imageSrc, vestibularInfo }: CourseVideoProp
         </button>
       </div>
       {vestibularInfo && (
-        <a href="#" className={styles.vestibularLink}>{vestibularInfo}</a>
+        <Link href="/cursos" className={styles.vestibularLink}>{vestibularInfo}</Link>
       )}
     </section>
   )

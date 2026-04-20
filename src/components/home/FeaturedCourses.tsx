@@ -2,6 +2,7 @@ import styles from './FeaturedCourses.module.css'
 
 interface FeaturedCoursesProps {
   overline?: string
+  graduationLabel?: string
   courses?: Array<{
     area: string
     courseName: string
@@ -18,15 +19,16 @@ const defaultFallbackImages: Record<string, string> = {
 }
 
 const defaultCourses = [
-  { area: 'Saúde', courseName: 'Medicina', pillColor: '#B9DFFF', image: null, href: '#' },
-  { area: 'Negócios', courseName: 'Administração', pillColor: '#FFD5A9', image: null, href: '#' },
-  { area: 'Tecnologia', courseName: 'Sistemas de Informação', pillColor: '#F0D8FF', image: null, href: '#' },
+  { area: 'Saúde', courseName: 'Medicina', pillColor: '#B9DFFF', image: null, href: '/cursos/medicina' },
+  { area: 'Negócios', courseName: 'Administração', pillColor: '#FFD5A9', image: null, href: '/cursos/administracao' },
+  { area: 'Tecnologia', courseName: 'Sistemas de Informação', pillColor: '#F0D8FF', image: null, href: '/cursos/sistemas-de-informacao' },
 ]
 
 const imgSrc = (media: any, fallback: string) => media?.url || fallback
 
 export function FeaturedCourses({
   overline = 'Cursos em destaque',
+  graduationLabel = 'Graduação',
   courses,
 }: FeaturedCoursesProps) {
   const items = courses ?? defaultCourses
@@ -50,7 +52,7 @@ export function FeaturedCourses({
               <div className={styles.cardOverlay}>
                 <div className={styles.cardTop}>
                   <span className={styles.areaName}>{item.area}</span>
-                  <span className={styles.graduationPill}>Graduação</span>
+                  <span className={styles.graduationPill}>{graduationLabel}</span>
                 </div>
 
                 <div className={styles.cardBottom}>

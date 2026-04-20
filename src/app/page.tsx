@@ -59,6 +59,7 @@ export default async function Home() {
         heading={hero.heading}
         subheading={hero.subheading}
         backgroundImage={resolveMedia(hero.backgroundImage)}
+        videoUrl={hero.heroVideoUrl}
         vestibularBtnLabel={hero.vestibularBtnLabel}
         vestibularBtnHref={hero.vestibularBtnHref}
         belowTitle={below.title}
@@ -68,6 +69,7 @@ export default async function Home() {
 
       <FeaturedCourses
         overline={fc.overline}
+        graduationLabel={fc.graduationLabel}
         courses={fc.courses?.length > 0 ? fc.courses.map((c: any) => ({
           area: c.area,
           courseName: c.courseName,
@@ -170,6 +172,7 @@ export default async function Home() {
       />
 
       <VestibularCTA
+        headline={vest.headline}
         vestibularInfo={vest.vestibularInfo}
         cardOverline={vest.cardOverline}
         cardTitle={vest.cardTitle}

@@ -4,6 +4,7 @@ interface HeroHomeProps {
   heading?: string
   subheading?: string
   backgroundImage?: { url: string } | null
+  videoUrl?: string
   vestibularBtnLabel?: string
   vestibularBtnHref?: string
   belowTitle?: string
@@ -15,6 +16,7 @@ export function HeroHome({
   heading = 'Não dá para comparar',
   subheading = 'Experiência de ensino realmente superior,\nseja bem-vindo(a) à Unifacisa.',
   backgroundImage,
+  videoUrl = '/videos/hero-home.mp4',
   vestibularBtnLabel = 'Vestibular 2026 · Inscreva-se',
   vestibularBtnHref = '#vestibular',
   belowTitle = 'Aprender fazendo:\nconheça a excelência Unifacisa',
@@ -34,11 +36,12 @@ export function HeroHome({
       <div className={styles.heroImageWrapper}>
         <video
           className={styles.heroVideo}
-          src="/videos/hero-home.mp4"
+          src={videoUrl}
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
         />
         <div className={styles.heroOverlay}>
           <h1 className={styles.heroTitle}>{heading}</h1>
