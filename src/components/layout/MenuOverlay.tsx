@@ -116,7 +116,7 @@ export function MenuOverlay({ data }: { data?: MenuData }) {
                   <h3 className={styles.columnTitle}>{col.title}</h3>
                   <div className={styles.columnLinks}>
                     {col.links?.map((l, j) => (
-                      {!l.href || l.href === '#' ? <span key={j} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</span> : <a key={j} href={l.href} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</a>}
+                      !l.href || l.href === '#' ? <span key={j} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</span> : <a key={j} href={l.href} className={l.style === 'bold' ? styles.linkBold : undefined}>{l.label}</a>
                     ))}
                   </div>
                 </div>
