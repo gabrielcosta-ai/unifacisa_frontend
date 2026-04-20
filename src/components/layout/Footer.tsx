@@ -64,7 +64,7 @@ export async function Footer() {
         {/* Top */}
         <div className={styles.top}>
           <div className={styles.topLeft}>
-            <Image src="/images/logo-unifacisa-white.png" alt="Unifacisa" width={323} height={72} />
+            <a href="/"><Image src="/images/logo-unifacisa-white.png" alt="Unifacisa" width={323} height={72} /></a>
             <p className={styles.copyright}>{copyright}</p>
           </div>
           <div className={styles.topMid}>

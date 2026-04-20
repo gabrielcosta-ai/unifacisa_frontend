@@ -29,7 +29,7 @@ export function NavSecondary({ breadcrumb }: NavSecondaryProps) {
               <circle cx="9.5" cy="10" r="2.5" stroke="#323232" strokeWidth="1.2"/>
               <path d="M4 17c0-3 2.5-5.5 5.5-5.5S15 14 15 17" stroke="#323232" strokeWidth="1.2" fill="none"/>
             </svg>
-            Alumini
+            Alumni
           </a>
           <a href="#" className={styles.link}>
             <svg width="21" height="21" viewBox="50 49 130 130" xmlns="http://www.w3.org/2000/svg">

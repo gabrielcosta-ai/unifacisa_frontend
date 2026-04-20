@@ -20,7 +20,7 @@ export function HeroHome({
   vestibularBtnLabel = 'Vestibular 2026 · Inscreva-se',
   vestibularBtnHref = '#vestibular',
   belowTitle = 'Aprender fazendo:\nconheça a excelência Unifacisa',
-  coursesBtnLabel = 'Ver todos os cursos e modalidade',
+  coursesBtnLabel = 'Ver todos os cursos e modalidades',
   coursesBtnHref = '/cursos',
 }: HeroHomeProps) {
   const bgUrl = backgroundImage?.url || '/images/home/campus-fachada-alunos.png'

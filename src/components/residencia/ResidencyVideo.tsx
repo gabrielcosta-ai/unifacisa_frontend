@@ -10,7 +10,7 @@ interface ResidencyVideoProps {
 }
 
 export function ResidencyVideo({
-  text = 'Assista a apresentação do nosso Programa de Residência',
+  text = 'Assista à apresentação do nosso Programa de Residência',
   backgroundImage,
   videoUrl,
 }: ResidencyVideoProps) {

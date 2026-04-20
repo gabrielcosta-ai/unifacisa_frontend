@@ -35,12 +35,14 @@ export async function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.left}>
-          <Image
-            src={logoUrl}
-            alt="Unifacisa"
-            width={logoWidth}
-            height={logoHeight}
-          />
+          <a href="/">
+            <Image
+              src={logoUrl}
+              alt="Unifacisa"
+              width={logoWidth}
+              height={logoHeight}
+            />
+          </a>
           <span className={styles.slogan}>
             UMA EXPERIÊNCIA QUE{'\n'}MARCA A SUA HISTÓRIA.
           </span>
